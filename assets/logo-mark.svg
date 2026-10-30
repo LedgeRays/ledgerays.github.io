@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="410 270 660 660" role="img" aria-label="LedgeRays mark">
+  <rect x="430" y="377" width="488" height="528" rx="110" fill="#16A34A"/>
+  <g stroke="#FFFFFF" stroke-width="46" stroke-linecap="round">
+    <path d="M545 545H789"/><path d="M545 650H737"/><path d="M545 756H684"/>
+  </g>
+  <g stroke="#A3E635" stroke-width="46" stroke-linecap="round">
+    <path d="M905 307V337"/><path d="M972 388L1017 343"/><path d="M997 468H1027"/>
+  </g>
+</svg>

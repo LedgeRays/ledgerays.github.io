@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LedgeRays Systems | Custom Business Systems for Any Industry</title>
+  <meta name="description" content="LedgeRays Systems builds custom business systems for any industry: real-time dashboards, interactive charts and reports, and all your records in one place. Works on laptop, tablet and phone.">
+  <meta name="theme-color" content="#0B3D2E">
+
+  <!-- Facebook / social link preview
+       After uploading, replace "assets/og-image.jpg" below with the FULL link, e.g.
+       https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/assets/og-image.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LedgeRays Systems">
+  <meta property="og:title" content="LedgeRays Systems | Any Business. One System Built for You.">
+  <meta property="og:description" content="Custom business systems with real-time dashboards, interactive charts and reports. Built around how your business works.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script>
+    // apply saved theme before paint (avoids a flash)
+    try { var t = localStorage.getItem('lr-theme'); if (t) document.documentElement.setAttribute('data-bs-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- Reusable SVG icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dash" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.6 2.6-2.8-.6-.6-2.8z"/></symbol>
+    <symbol id="i-samples" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 14l5-4 4 3 3-2 6 4"/><circle cx="16" cy="8" r="1.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+    <symbol id="i-steps" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><circle cx="12" cy="5" r="2.5"/><circle cx="12" cy="19" r="2.5"/><path d="M7 10.5l3-3.5M14 7l3 3.5M17 13.5l-3 3.5M10 17l-3-3.5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.7-2.5 2.2-2.5 4M12 17h.01"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.8 7L4 20l1.1-4.6A8 8 0 1121 12z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 11a3 3 0 100-6M22 21c0-3-2-5-4-5.5"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM6 6H4v15h16V6h-2M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7h16a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2zM3 7l12-4v4M16 13h2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M1 17h16"/><rect x="17" y="8" width="5" height="11" rx="1.2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR (offcanvas on tablet portrait & phones) ================= -->
+  <aside class="sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="sidebar" aria-label="Main navigation">
+    <div class="sidebar-inner">
+      <a href="#dashboard" class="brand" data-go="dashboard" aria-label="LedgeRays Systems home">
+        <img src="assets/logo-mark.svg" alt="" class="brand-mark" width="46" height="46">
+        <span class="brand-text"><span class="brand-l1">Ledge<b>Rays</b></span><span class="brand-l2">Systems</span></span>
+      </a>
+      <button type="button" class="btn-close btn-close-white d-lg-none sidebar-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close menu"></button>
+
+      <nav class="side-nav nav flex-column" role="tablist">
+        <div class="side-label">Overview</div>
+        <a class="nav-link active" href="#dashboard" data-go="dashboard" role="tab"><svg class="ic"><use href="#i-dash"/></svg>Dashboard</a>
+        <a class="nav-link" href="#build" data-go="build" role="tab"><svg class="ic"><use href="#i-build"/></svg>What We Build</a>
+        <a class="nav-link" href="#samples" data-go="samples" role="tab"><svg class="ic"><use href="#i-samples"/></svg>Sample Designs<span class="badge-count">8</span></a>
+        <a class="nav-link" href="#features" data-go="features" role="tab"><svg class="ic"><use href="#i-star"/></svg>Features</a>
+        <div class="side-label">Get Started</div>
+        <a class="nav-link" href="#process" data-go="process" role="tab"><svg class="ic"><use href="#i-steps"/></svg>How It Works</a>
+        <a class="nav-link" href="#packages" data-go="packages" role="tab"><svg class="ic"><use href="#i-box"/></svg>Packages</a>
+        <a class="nav-link" href="#faq" data-go="faq" role="tab"><svg class="ic"><use href="#i-help"/></svg>FAQ</a>
+        <a class="nav-link" href="#contact" data-go="contact" role="tab"><svg class="ic"><use href="#i-mail"/></svg>Contact</a>
+      </nav>
+
+      <div class="side-theme">
+        <svg class="ic"><use href="#i-moon"/></svg><span>Dark mode</span>
+        <button type="button" class="switch" id="themeSwitch" role="switch" aria-checked="false" aria-label="Dark mode"><i></i></button>
+      </div>
+      <div class="side-cta">
+        <span class="side-cta-dot"></span>
+        <b>Free consultation</b>
+        <p>Tell us how your business works. We'll show you what your system could look like.</p>
+        <a href="https://m.me/LedgeRays" target="_blank" rel="noopener" class="btn btn-lime w-100"><svg class="ic"><use href="#i-chat"/></svg>Message Us</a>
+      </div>
+      <div class="side-foot">© <span id="yr">2026</span> LedgeRays Systems</div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+      <a href="#dashboard" data-go="dashboard" class="top-logo d-lg-none" aria-label="LedgeRays Systems home"><img src="assets/logo-mark.svg" alt="" width="34" height="34"><span>Ledge<b>Rays</b></span></a>
+      <div class="top-title">
+        <h1 id="pageTitle">Dashboard</h1>
+        <p id="pageSub">Custom business systems for any industry</p>
+      </div>
+      <div class="top-actions">
+        <span class="live-pill d-none d-md-inline-flex"><i></i>Live demo data</span>
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle light or dark mode"><svg class="ic ic-moon"><use href="#i-moon"/></svg><svg class="ic ic-sun"><use href="#i-sun"/></svg></button>
+        <a href="https://m.me/LedgeRays" target="_blank" rel="noopener" class="btn btn-brand"><svg class="ic"><use href="#i-chat"/></svg><span class="d-none d-sm-inline">Message Us</span></a>
+      </div>
+    </header>
+
+    <main class="content tab-content">
+
+      <!-- ================= 1. DASHBOARD ================= -->
+      <section class="tab-pane fade show active" id="tab-dashboard" data-title="Dashboard" data-sub="Custom business systems for any industry">
+        <div class="fit">
+          <div class="card-x hero hero-bar">
+            <div class="hero-txt">
+              <h2>Any Business. <span>One System Built for You.</span></h2>
+              <p>Real-time dashboards, interactive reports and all your records in one place. Built for any industry: lending, auto shops, rentals, schools, contractors, wholesale, events and more. This page is a live sample, so click around.</p>
+            </div>
+            <div class="hero-btns">
+              <a href="#samples" data-go="samples" class="btn btn-lime">View Sample Designs<svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a href="#contact" data-go="contact" class="btn btn-ghost">Free Consultation</a>
+            </div>
+          </div>
+
+          <div class="grid g-kpi">
+            <div class="card-x kpi" data-kpi="0"><div class="kpi-top"><span class="kpi-ic"><svg class="ic"><use href="#i-wallet"/></svg></span>Sales This Month</div><b class="count" data-to="1284500" data-prefix="₱">₱0</b><small><em class="up">▲ 12.4%</em> vs last month</small><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 24 L12 20 L24 22 L36 15 L48 17 L60 11 L72 13 L84 7 L100 4"/></svg></div>
+            <div class="card-x kpi" data-kpi="1"><div class="kpi-top"><span class="kpi-ic"><svg class="ic"><use href="#i-clip"/></svg></span>Records Today</div><b class="count" id="liveRecords" data-to="3482">0</b><small><em class="up live-dot">Live</em> updating in real time</small><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 20 L10 22 L20 16 L30 18 L40 12 L50 15 L60 9 L70 12 L80 8 L90 10 L100 5"/></svg></div>
+            <div class="card-x kpi" data-kpi="2"><div class="kpi-top"><span class="kpi-ic"><svg class="ic"><use href="#i-users"/></svg></span>Active Clients</div><b class="count" data-to="312">0</b><small><em class="up">▲ 18</em> new this month</small><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 26 L14 24 L28 21 L42 20 L56 16 L70 14 L84 10 L100 8"/></svg></div>
+            <div class="card-x kpi" data-kpi="3"><div class="kpi-top"><span class="kpi-ic"><svg class="ic"><use href="#i-chart"/></svg></span>Target Reached</div><b class="count" data-to="92" data-suffix="%">0%</b><small>₱1.28M of ₱1.4M goal</small><div class="progress kpi-progress" role="progressbar" aria-label="Target reached" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar grow" style="--w:92%"></div></div></div>
+          </div>
+
+          <div class="grid g-panels">
+            <div class="card-x chart-card p-line">
+              <div class="card-head">
+                <h3>Sales vs Target</h3>
+                <span class="keys"><span><i class="k-sales"></i>Sales</span><span><i class="k-target"></i>Target</span></span>
+                <div class="seg" role="group" aria-label="Chart range">
+                  <button type="button" class="on" data-range="6">6M</button>
+                  <button type="button" data-range="12">12M</button>
+                </div>
+              </div>
+              <div class="chart-wrap"><canvas id="lineChart" aria-label="Sample sales line chart" role="img"></canvas></div>
+            </div>
+            <div class="card-x chart-card p-donut">
+              <div class="card-head"><h3>Sales by Category</h3><small class="muted-sm">tap to filter</small></div>
+              <div class="donut-body">
+                <div class="donut-canvas"><canvas id="donutChart" aria-label="Sample sales by category donut chart" role="img"></canvas></div>
+                <ul class="d-legend" id="donutLegend"></ul>
+              </div>
+            </div>
+            <div class="card-x p-feed">
+              <div class="card-head"><h3>Live Activity</h3><span class="live-pill sm"><i></i>Live</span></div>
+              <ul class="feed" id="feed" aria-live="polite"></ul>
+            </div>
+            <div class="card-x chart-card p-bar">
+              <div class="card-head">
+                <h3>Records per Day</h3>
+                <div class="seg" role="group" aria-label="Week">
+                  <button type="button" class="on" data-week="0">This week</button>
+                  <button type="button" data-week="1">Last week</button>
+                </div>
+              </div>
+              <div class="chart-wrap"><canvas id="barChart" aria-label="Sample records per day bar chart" role="img"></canvas></div>
+            </div>
+            <div class="card-x p-tg">
+              <div class="card-head">
+                <h3 id="tgTitle" class="visually-hidden">Today's Tasks</h3>
+                <div class="seg seg-full" role="tablist" aria-label="Tasks or goals">
+                  <button type="button" class="on" data-tg="tasks" role="tab" aria-selected="true">Today's Tasks</button>
+                  <button type="button" data-tg="goals" role="tab" aria-selected="false">Monthly Goals</button>
+                </div>
+              </div>
+              <div class="tg-pane on" id="tgTasks"><div class="tasks" id="tasks"></div><small class="muted-sm tg-foot" id="taskCount">1 of 5 done</small></div>
+              <div class="tg-pane" id="tgGoals"><div class="goals" id="goals"></div><small class="muted-sm tg-foot">October goals</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 2. WHAT WE BUILD ================= -->
+      <section class="tab-pane fade" id="tab-build" data-title="What We Build" data-sub="Every module is designed around your business">
+        <div class="fit">
+          <div class="grid g-3x3">
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-dash"/></svg></span><h3>Business Dashboards</h3><p>See sales, expenses, balances and performance at a glance, updated as you work.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-users"/></svg></span><h3>Client &amp; Customer Records</h3><p>Profiles, history, accounts and notes for every client, member, tenant or student.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-receipt"/></svg></span><h3>Sales &amp; Billing</h3><p>Invoices, statements, collections and running balances without manual computing.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-box"/></svg></span><h3>Inventory &amp; Stock</h3><p>Stock levels, movements and low-stock alerts so you reorder on time.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-clip"/></svg></span><h3>Job Orders &amp; Projects</h3><p>Track every job or project from start to finish, with status, costs and progress.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-cal"/></svg></span><h3>Bookings &amp; Scheduling</h3><p>Calendars, reservations and reminders for appointments, events and deliveries.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-wallet"/></svg></span><h3>Staff &amp; Payroll</h3><p>Attendance, commissions, cash advances and payroll summaries in one place.</p></div>
+            <div class="card-x tile"><span class="tile-ic"><svg class="ic"><use href="#i-chart"/></svg></span><h3>Reports &amp; Analytics</h3><p>Daily, monthly and yearly reports with charts you can filter and print.</p></div>
+            <div class="card-x tile tile-accent"><span class="tile-ic"><svg class="ic"><use href="#i-plus"/></svg></span><h3>Your Custom Module</h3><p>Have a process no software covers? We build the section your business needs.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. SAMPLE DESIGNS ================= -->
+      <section class="tab-pane fade" id="tab-samples" data-title="Sample Designs" data-sub="8 sample systems, each designed for a different business">
+        <div class="fit">
+          <div class="filter-row">
+            <div class="chips chips-filter" id="filters" role="group" aria-label="Filter sample designs"></div>
+            <span class="filter-note">Tap a design to enlarge</span>
+          </div>
+          <div class="grid g-4x2" id="portfolio"></div>
+        </div>
+      </section>
+
+      <!-- ================= 4. FEATURES ================= -->
+      <section class="tab-pane fade" id="tab-features" data-title="Features" data-sub="What every LedgeRays system includes">
+        <div class="fit">
+          <div class="grid g-3x2">
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-bolt"/></svg></span><h3>Real-Time Dashboard Tracking</h3><p>Numbers update the moment a record is saved. No waiting for end-of-day tallies.</p></div>
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-chart"/></svg></span><h3>Interactive Charts &amp; Reports</h3><p>Hover, filter and switch date ranges to see the story behind your numbers.</p></div>
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-folder"/></svg></span><h3>All Records in One Place</h3><p>No more scattered notebooks, sheets and chat messages. Search anything in seconds.</p></div>
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-devices"/></svg></span><h3>Works on Any Device</h3><p>Use it on a laptop at the office, a tablet on the floor or a phone in the field.</p></div>
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-layers"/></svg></span><h3>Built Around Your Process</h3><p>Your sections, your terms, your workflow. Not a one-size-fits-all template.</p></div>
+            <div class="card-x feat"><span class="feat-ic"><svg class="ic"><use href="#i-lock"/></svg></span><h3>Secure Access</h3><p>User logins so only your team can see and update your business data.</p></div>
+          </div>
+          <div class="card-x strip">
+            <b>Your system, your brand:</b>
+            <span><svg class="ic"><use href="#i-check"/></svg>Your logo &amp; colors</span>
+            <span><svg class="ic"><use href="#i-check"/></svg>Light &amp; dark mode</span>
+            <span><svg class="ic"><use href="#i-check"/></svg>Printable reports</span>
+            <span><svg class="ic"><use href="#i-check"/></svg>Room to grow</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 5. HOW IT WORKS ================= -->
+      <section class="tab-pane fade" id="tab-process" data-title="How It Works" data-sub="From first chat to a working system in 4 steps">
+        <div class="fit">
+          <div class="steps">
+            <div class="card-x step"><span class="step-n">01</span><h3>Free Consultation</h3><p>We talk about your business, how you work today and what you want to track.</p><span class="step-tag">Message or call</span></div>
+            <div class="card-x step"><span class="step-n">02</span><h3>Design</h3><p>We map your sections and show you a sample layout of your dashboard before building.</p><span class="step-tag">You review &amp; approve</span></div>
+            <div class="card-x step"><span class="step-n">03</span><h3>Build &amp; Test</h3><p>We build your system, move in your existing records and test it with real scenarios.</p><span class="step-tag">Excel data welcome</span></div>
+            <div class="card-x step"><span class="step-n">04</span><h3>Launch &amp; Support</h3><p>We set it up on your devices, train your team and stay available for changes.</p><span class="step-tag">Ongoing support</span></div>
+          </div>
+          <div class="grid g-2">
+            <div class="card-x note">
+              <h3>What to prepare</h3>
+              <ul class="checks">
+                <li><svg class="ic"><use href="#i-check"/></svg>A quick walk-through of your daily process</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Sample forms, notebooks or Excel files you use now</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>The reports you wish you had</li>
+              </ul>
+            </div>
+            <div class="card-x note note-dark">
+              <h3>Clear timeline from day one</h3>
+              <p>After your free consultation, we give you a clear scope and schedule for your system, so you know exactly what to expect from day one.</p>
+              <a href="#contact" data-go="contact" class="btn btn-lime">Start with a free consultation<svg class="ic"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. PACKAGES ================= -->
+      <section class="tab-pane fade" id="tab-packages" data-title="Packages" data-sub="Choose a starting point. Every package is customized.">
+        <div class="fit">
+          <div class="grid g-3">
+            <div class="card-x plan">
+              <span class="plan-tag">Starter</span>
+              <h3>For small businesses</h3>
+              <div class="plan-price">Custom quote</div>
+              <ul class="checks">
+                <li><svg class="ic"><use href="#i-check"/></svg>Main dashboard</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Up to 3 sections</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Basic reports</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Works on any device</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>1 user account</li>
+              </ul>
+              <a href="#contact" data-go="contact" class="btn btn-ghost w-100">Ask about Starter</a>
+            </div>
+            <div class="card-x plan plan-pop">
+              <span class="plan-badge">Most popular</span>
+              <span class="plan-tag">Business</span>
+              <h3>For growing businesses</h3>
+              <div class="plan-price">Custom quote</div>
+              <ul class="checks">
+                <li><svg class="ic"><use href="#i-check"/></svg>Everything in Starter</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Up to 6 sections</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Interactive charts &amp; reports</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Multiple user accounts</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Excel data migration</li>
+              </ul>
+              <a href="#contact" data-go="contact" class="btn btn-lime w-100">Ask about Business</a>
+            </div>
+            <div class="card-x plan">
+              <span class="plan-tag">Pro</span>
+              <h3>For multi-branch operations</h3>
+              <div class="plan-price">Custom quote</div>
+              <ul class="checks">
+                <li><svg class="ic"><use href="#i-check"/></svg>Everything in Business</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Unlimited sections</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Multiple branches</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Advanced analytics</li>
+                <li><svg class="ic"><use href="#i-check"/></svg>Priority support</li>
+              </ul>
+              <a href="#contact" data-go="contact" class="btn btn-ghost w-100">Ask about Pro</a>
+            </div>
+          </div>
+          <div class="card-x strip addons">
+            <b>Add-ons:</b>
+            <span><svg class="ic"><use href="#i-plus"/></svg>Extra section</span>
+            <span><svg class="ic"><use href="#i-plus"/></svg>Additional users</span>
+            <span><svg class="ic"><use href="#i-plus"/></svg>Custom reports</span>
+            <span><svg class="ic"><use href="#i-plus"/></svg>Team training</span>
+            <span><svg class="ic"><use href="#i-plus"/></svg>Monthly support plan</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 7. FAQ ================= -->
+      <section class="tab-pane fade" id="tab-faq" data-title="FAQ" data-sub="Common questions from business owners">
+        <div class="fit">
+          <div class="grid g-faq">
+            <div class="accordion faq" id="faqA">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true">Will it work for my type of business?</button></h3>
+                <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqA"><div class="accordion-body">Yes. Every system is built from scratch around how your business runs, whatever your industry. The sample designs are just examples.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">What devices can I use?</button></h3>
+                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqA"><div class="accordion-body">Laptops, desktops, tablets and phones. The layout adjusts to each screen.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Can you move my Excel or notebook records?</button></h3>
+                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqA"><div class="accordion-body">Yes. We can bring in your existing Excel or Google Sheets data so you start with your history already in the system.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">Do I need technical skills?</button></h3>
+                <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqA"><div class="accordion-body">No. If you can use Facebook, you can use your system. We also train you and your team.</div></div>
+              </div>
+            </div>
+            <div class="accordion faq" id="faqB">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="true">How much does it cost?</button></h3>
+                <div id="q5" class="accordion-collapse collapse show" data-bs-parent="#faqB"><div class="accordion-body">Every system is priced based on the sections and features you choose. Message us for a free consultation and we'll send you a clear quote.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">How long does it take to build?</button></h3>
+                <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqB"><div class="accordion-body">You'll get a clear schedule right after your free consultation, with target dates for every step.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7">Can I add sections later?</button></h3>
+                <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqB"><div class="accordion-body">Yes. Your system can grow with your business. Add sections, users or reports anytime.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8">Do you work with businesses in other countries?</button></h3>
+                <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqB"><div class="accordion-body">Yes. We work with businesses in any country through online consultations, remote setup and support.</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-x strip faq-cta">
+            <b>Still have questions?</b>
+            <span class="faq-cta-text">We're happy to walk you through it.</span>
+            <a href="https://m.me/LedgeRays" target="_blank" rel="noopener" class="btn btn-brand ms-auto"><svg class="ic"><use href="#i-chat"/></svg>Message Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 8. CONTACT ================= -->
+      <section class="tab-pane fade" id="tab-contact" data-title="Contact" data-sub="Let's talk about your business">
+        <div class="fit">
+          <div class="grid g-contact">
+            <div class="contact-list">
+              <a class="card-x contact-card" href="https://m.me/LedgeRays" target="_blank" rel="noopener"><span class="c-ic c-msg"><svg class="ic"><use href="#i-chat"/></svg></span><div><b>Messenger</b><span>Fastest way to reach us</span></div><svg class="ic c-go"><use href="#i-arrow"/></svg></a>
+              <a class="card-x contact-card" href="https://www.facebook.com/LedgeRays/" target="_blank" rel="noopener"><span class="c-ic c-fb"><svg class="ic"><use href="#i-fb"/></svg></span><div><b>Facebook Page</b><span>facebook.com/LedgeRays</span></div><svg class="ic c-go"><use href="#i-arrow"/></svg></a>
+              <a class="card-x contact-card" href="mailto:ledgerays@outlook.com"><span class="c-ic c-mail"><svg class="ic"><use href="#i-mail"/></svg></span><div><b>Email</b><span>ledgerays@outlook.com</span></div><svg class="ic c-go"><use href="#i-arrow"/></svg></a>
+              <div class="card-x contact-promise">
+                <img src="assets/logo-mark.svg" alt="" width="44" height="44">
+                <p><b>Free consultation, no commitment.</b> We work with businesses in any country.</p>
+              </div>
+            </div>
+            <form class="card-x contact-form" id="contactForm" novalidate>
+              <h3>Tell us about your business</h3>
+              <p class="form-sub">Send us a message and we'll get back to you within 24 hours.</p>
+              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="form-grid">
+                <label>Your name<input class="form-control" name="name" required autocomplete="name" placeholder="John Smith"></label>
+                <label>Business name<input class="form-control" name="business" autocomplete="organization" placeholder="Smith Trading Co."></label>
+                <label>Email<input class="form-control" type="email" name="email" required autocomplete="email" placeholder="john@example.com"></label>
+                <label>Type of business<input class="form-control" name="type" placeholder="e.g. hardware store, school"></label>
+                <label>Mobile number
+                  <span class="input-group">
+                    <select class="form-select code" name="code" aria-label="Country code" id="countryCode"></select>
+                    <input class="form-control" name="mobile" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="912 345 6789">
+                  </span>
+                </label>
+                <label>Security check: <span id="captchaQ">What is 2 + 3?</span><input class="form-control" name="captcha" inputmode="numeric" autocomplete="off" required placeholder="Your answer"></label>
+                <label class="span-2">What do you want to track or improve?<textarea class="form-control" name="message" rows="3" required placeholder="Tell us how you manage your records today"></textarea></label>
+              </div>
+              <div class="form-foot">
+                <span class="form-msg" id="formMsg" role="status"></span>
+                <button type="submit" class="btn btn-brand" id="sendBtn"><svg class="ic"><use href="#i-mail"/></svg>Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- Phone bottom tab bar -->
+<nav class="bottom-nav d-lg-none" aria-label="Quick navigation">
+  <a href="#dashboard" data-go="dashboard" class="active"><svg class="ic"><use href="#i-dash"/></svg>Home</a>
+  <a href="#build" data-go="build"><svg class="ic"><use href="#i-build"/></svg>Build</a>
+  <a href="#samples" data-go="samples"><svg class="ic"><use href="#i-samples"/></svg>Samples</a>
+  <a href="#packages" data-go="packages"><svg class="ic"><use href="#i-box"/></svg>Packages</a>
+  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar"><svg class="ic"><use href="#i-menu"/></svg>Menu</button>
+</nav>
+
+<!-- Sample design viewer -->
+<div class="modal fade" id="viewer" tabindex="-1" aria-labelledby="viewerTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div><h5 class="modal-title" id="viewerTitle">Sample design</h5><small id="viewerSub" class="text-secondary"></small></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0"><img id="viewerImg" src="" alt="" class="w-100 d-block"></div>
+      <div class="modal-footer">
+        <span class="me-auto"></span>
+        <button type="button" class="btn btn-ghost" id="prevBtn">‹ Prev</button>
+        <button type="button" class="btn btn-ghost" id="nextBtn">Next ›</button>
+        <a href="https://m.me/LedgeRays" target="_blank" rel="noopener" class="btn btn-brand">I want one like this</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
