@@ -459,15 +459,19 @@
     fetch('https://formsubmit.co/ajax/' + EMAIL, {
       method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data)
     }).then(function (r) { return r.json(); }).then(function (res) {
-      if (res && (res.success === true || res.success === 'true')) {
-        say('Message sent! We\'ll get back to you soon.', 'ok');
+      var ok = res && (res.success === true || res.success === 'true');
+      if (ok) {
+        say('Message sent! We\'ll get back to you within 24 hours.', 'ok');
         form.reset(); newQuestion();
-      } else { throw new Error('send failed'); }
+      } else if (res && /activat/i.test(res.message || '')) {
+        // first-time setup only: FormSubmit emails an activation link to the site owner
+        say('Form setup pending: check ledgerays@outlook.com for the "Activate Form" email, then send again.', 'err');
+      } else {
+        throw new Error((res && res.message) || 'send failed');
+      }
     }).catch(function () {
-      // fallback: open the visitor's email app with the message filled in
-      var body = 'Name: ' + name + '\nEmail: ' + email + '\nBusiness: ' + data.business + '\nType of business: ' + data.type_of_business + '\nMobile: ' + mobile + '\n\n' + text;
-      location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(data._subject) + '&body=' + encodeURIComponent(body);
-      say('Opening your email app to send the message…', 'ok');
+      msg.innerHTML = 'Sorry, the message could not be sent. Please try again or <a href="https://m.me/LedgeRays" target="_blank" rel="noopener">message us on Messenger</a>.';
+      msg.className = 'form-msg err';
     }).then(function () { btn.disabled = false; });
   });
 

@@ -11,10 +11,11 @@
        After uploading, replace "assets/og-image.jpg" below with the FULL link, e.g.
        https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/assets/og-image.jpg -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ledgerays.github.io/">
   <meta property="og:site_name" content="LedgeRays Systems">
   <meta property="og:title" content="LedgeRays Systems | Any Business. One System Built for You.">
   <meta property="og:description" content="Custom business systems with real-time dashboards, interactive charts and reports. Built around how your business works.">
-  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image" content="https://ledgerays.github.io/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -397,13 +398,13 @@
                 <label>Business name<input class="form-control" name="business" autocomplete="organization" placeholder="Smith Trading Co."></label>
                 <label>Email<input class="form-control" type="email" name="email" required autocomplete="email" placeholder="john@example.com"></label>
                 <label>Type of business<input class="form-control" name="type" placeholder="e.g. hardware store, school"></label>
-                <label>Mobile number
+                <label><span class="lbl">Mobile number</span>
                   <span class="input-group">
                     <select class="form-select code" name="code" aria-label="Country code" id="countryCode"></select>
                     <input class="form-control" name="mobile" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="912 345 6789">
                   </span>
                 </label>
-                <label>Security check: <span id="captchaQ">What is 2 + 3?</span><input class="form-control" name="captcha" inputmode="numeric" autocomplete="off" required placeholder="Your answer"></label>
+                <label><span class="lbl">Security check: <b id="captchaQ">What is 2 + 3?</b></span><input class="form-control" name="captcha" inputmode="numeric" autocomplete="off" required placeholder="Your answer"></label>
                 <label class="span-2">What do you want to track or improve?<textarea class="form-control" name="message" rows="3" required placeholder="Tell us how you manage your records today"></textarea></label>
               </div>
               <div class="form-foot">

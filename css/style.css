@@ -650,3 +650,12 @@ textarea.form-control{resize:none}
 @media (min-width:992px) and (orientation:landscape) and (max-height:820px){
   .task:nth-child(n+4){display:none}
 }
+
+/* form label alignment: label text always one line, fields line up */
+.form-grid{align-items:end}
+.form-grid label{justify-content:flex-end}
+.form-grid .lbl{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#captchaQ{color:var(--brand);font-weight:800}
+.form-msg a{color:inherit;text-decoration:underline}
+.form-grid .span-2{align-self:stretch;justify-content:flex-start}
+.form-grid .span-2 textarea{flex:1}
